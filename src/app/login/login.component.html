@@ -1,0 +1,38 @@
+<div class="back">
+
+
+    <div class="div-center">
+  
+  
+      <div class="content">
+  
+  
+        <h3>Login</h3>
+        <hr />
+        
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1"><i class="material-icons">&#xe0e1;</i> <b> Email address</b> </label>
+            <input type="email" formControlName="email"  class="form-control" id="exampleInputEmail1" placeholder="Email" >
+            
+          </div> <br>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> <i style='font-size:20px' class='fas'>&#xf084;</i> <b> Password </b></label>
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <br>
+            
+          </div> <br>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <hr />
+          <p style="color: rgb(68, 139, 231);">New user?</p>
+          <button type="button"  routerLink="/signup" class="btn btn-link" style="font: bold;"> Signup</button>
+         
+  
+        </form>
+  
+      </div>
+  
+  
+     
+    </div>

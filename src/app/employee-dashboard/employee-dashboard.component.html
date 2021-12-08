@@ -1,0 +1,77 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color: white;">Angular Crud</h1>
+        <div class="d-flex">
+            <button type="button" (click)="clickAddEmployee()" class="btn btn-success btn-lg" (click)="openModal()">Add Employee</button>
+            <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+            <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title"> Employee Details</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <form [formGroup]="FormValue">
+                                <div class="form-group">
+                                    <label for="exampleInputFirstName">First Name</label>
+                                    <input type="email" formControlName="firstName" class="form-control" id="exampleInputEmail1">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputastName">Last name</label>
+                                    <input type="email" formControlName="lastName" class="form-control" id="exampleInputEmail1">
+                                  </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Email address</label>
+                                  <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputMobileNo">Mobile no.</label>
+                                    <input type="email" formControlName="mobile" class="form-control" id="exampleInputEmail1" >
+                                  </div>              
+                                <div class="form-group">
+                                    <label for="exampleInputSalary">Salary</label>
+                                    <input type="email" formControlName="salary" class="form-control" id="exampleInputEmail1" >
+                                  </div>
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="cancel" class="btn btn-secondary" (click)="onCloseHandled()">Close</button>
+                            
+                            <button type="button"  *ngIf="showAdd" class="btn btn-primary" (click)="postEmloyeeDetails()">Add</button>
+                            <button type="button"  *ngIf="showUpdate" class="btn btn-primary" (click)="updateEmloyeeDetails()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Mobile no.</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of employeeData">
+            <td>{{row.id}}</td>
+            <td>{{row.firstName}}</td>
+            <td>{{row.lastName}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.mobile}}</td>    
+            <td>{{row.salary}}</td>
+            <td>
+                <button  (click)="onEdit(row)" type="button" class="btn btn-success btn-lg" (click)="openModal()" class="btn btn-info">Edit</button> &nbsp;
+                <button (click)="deleteEmployee(row)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

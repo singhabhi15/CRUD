@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "firstName": "Ankesh",
+      "lastName": "Singh",
+      "email": "ankesh420@gmail.com",
+      "mobile": "6312396555",
+      "salary": "46000"
+    },
+    {
+      "id": 6,
+      "firstName": "Nidhi",
+      "lastName": "Sharma",
+      "email": "sharmanidhu@gmail.com",
+      "mobile": "9630032103",
+      "salary": "50000"
+    },
+    {
+      "id": 7,
+      "firstName": "Rahul",
+      "lastName": "Sain",
+      "email": "rahul@gmail.com",
+      "mobile": "8956231452",
+      "salary": "15000"
+    }
+  ],
+  "signpusers": [
+    {
+      "fullName": "Abhishek Singh",
+      "email": "singhabhi6418@gmail.com",
+      "phone": "7062171696",
+      "password": "123456",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

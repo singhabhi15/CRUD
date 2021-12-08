@@ -1,0 +1,40 @@
+<div class="back">
+
+  <div class="div-center">
+  
+  
+      <div class="content">
+  
+  
+        <h3>Register</h3>
+        <hr />
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div class="form-group">
+                <label for="exampleInputName" ><i class="material-icons">&#xe7ff;</i> <b> Name</b></label>
+                <input formControlName="fullName" type="name" class="form-control" id="exampleInputName" placeholder="Name">
+              </div> <br>
+          <div class="form-group">
+            <label for="exampleInputEmail1"><i class="material-icons">&#xe0e1;</i> <b> Email address</b></label>
+            <input formControlName="email"  type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div> <br>
+          <div class="form-group">
+            <label for="exampleInputPhone"> <i class="material-icons">&#xe0cd;</i> <b> Phone no.</b></label>
+            <input type="phone" formControlName="phone"  class="form-control" id="exampleInputPhone" placeholder="Phone no.">
+          </div> <br>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> <i style='font-size:20px' class='fas'>&#xf084;</i> <b> Password</b></label>
+            <input type="password" formControlName="password"  class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div> <br>
+          <button type="submit" class="btn btn-primary">Signup</button>
+          <hr />
+          <p style="color: rgb(68, 139, 231);">Already Registered ? Click to login.</p>
+          <button type="button" routerLink="/login" class="btn btn-link">Login</button>
+         
+  
+        </form>
+  
+      </div>
+  
+  
+     
+    </div>
